@@ -1,0 +1,17 @@
+*.pyc
+db.sqlite3
+.DS_Store
+.env
+bin/
+local/
+share/
+lib/
+include/
+turkers/staticfiles/
+node_modules
+bundles
+yarn.lock
+package-lock.json
+.pytest_cache
+__pycache__
+.vscode

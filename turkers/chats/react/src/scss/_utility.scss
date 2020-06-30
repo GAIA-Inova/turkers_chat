@@ -1,0 +1,120 @@
+.m1  { margin: 1rem; }
+.mx1 { margin-left: 1rem; margin-right: 1rem; }
+.my1 { margin-top: 1rem; margin-bottom: 1rem; }
+.mt1 { margin-top: 1rem; }
+.mr1 { margin-right: 1rem; }
+.mb1 { margin-bottom: 1rem; }
+.ml1 { margin-left: 1rem; }
+
+.m2  { margin: 2rem; }
+.mx2 { margin-left: 2rem; margin-right: 2rem; }
+.my2 { margin-top: 2rem; margin-bottom: 2rem; }
+.mt2 { margin-top: 2rem; }
+.mr2 { margin-right: 2rem; }
+.mb2 { margin-bottom: 2rem; }
+.ml2 { margin-left: 2rem; }
+
+.m5  { margin: 5rem; }
+.mx5 { margin-left: 5rem; margin-right: 5rem; }
+.my5 { margin-top: 5rem; margin-bottom: 5rem; }
+.mt5 { margin-top: 5rem; }
+.mr5 { margin-right: 5rem; }
+.mb5 { margin-bottom: 5rem; }
+.ml5 { margin-left: 5rem; }
+
+.m6  { margin: 6rem; }
+.mx6 { margin-left: 6rem; margin-right: 6rem; }
+.my6 { margin-top: 6rem; margin-bottom: 6rem; }
+.mt6 { margin-top: 6rem; }
+.mr6 { margin-right: 6rem; }
+.mb6 { margin-bottom: 6rem; }
+.ml6 { margin-left: 6rem; }
+
+.m7  { margin: 7rem; }
+.mx7 { margin-left: 7rem; margin-right: 7rem; }
+.my7 { margin-top: 7rem; margin-bottom: 7rem; }
+.mt7 { margin-top: 7rem; }
+.mr7 { margin-right: 7rem; }
+.mb7 { margin-bottom: 7rem; }
+.ml7 { margin-left: 7rem; }
+
+.m8  { margin: 8rem; }
+.mx8 { margin-left: 8rem; margin-right: 8rem; }
+.my8 { margin-top: 8rem; margin-bottom: 8rem; }
+.mt8 { margin-top: 8rem; }
+.mr8 { margin-right: 8rem; }
+.mb8 { margin-bottom: 8rem; }
+.ml8 { margin-left: 8rem; }
+
+.p2  { padding: 2rem; }
+.px2 { padding-left: 2rem; padding-right: 2rem; }
+.py2 { padding-top: 2rem; padding-bottom: 2rem; }
+.pt2 { padding-top: 2rem; }
+.pr2 { padding-right: 2rem; }
+.pb2 { padding-bottom: 2rem; }
+.pl2 { padding-left: 2rem; }
+
+.p5  { padding: 5rem; }
+.px5 { padding-left: 5rem; padding-right: 5rem; }
+.py5 { padding-top: 5rem; padding-bottom: 5rem; }
+.pt5 { padding-top: 5rem; }
+.pr5 { padding-right: 5rem; }
+.pb5 { padding-bottom: 5rem; }
+.pl5 { padding-left: 5rem; }
+
+.p6  { padding: 6rem; }
+.px6 { padding-left: 6rem; padding-right: 6rem; }
+.py6 { padding-top: 6rem; padding-bottom: 6rem; }
+.pt6 { padding-top: 6rem; }
+.pr6 { padding-right: 6rem; }
+.pb6 { padding-bottom: 6rem; }
+.pl6 { padding-left: 6rem; }
+
+.p7  { padding: 7rem; }
+.px7 { padding-left: 7rem; padding-right: 7rem; }
+.py7 { padding-top: 7rem; padding-bottom: 7rem; }
+.pt7 { padding-top: 7rem; }
+.pr7 { padding-right: 7rem; }
+.pb7 { padding-bottom: 7rem; }
+.pl7 { padding-left: 7rem; }
+
+.p8  { padding: 8rem; }
+.px8 { padding-left: 8rem; padding-right: 8rem; }
+.py8 { padding-top: 8rem; padding-bottom: 8rem; }
+.pt8 { padding-top: 8rem; }
+.pr8 { padding-right: 8rem; }
+.pb8 { padding-bottom: 8rem; }
+.pl8 { padding-left: 8rem; }
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .mobile-only {
+    display: inherit;
+  }
+}
+
+.inverted {
+  -webkit-filter: invert(100%);
+  filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='invert'><feComponentTransfer><feFuncR type='linear' slope='-1' intercept='1'/><feFuncG type='linear' slope='-1' intercept='1' /><feFuncB type='linear' slope='-1' intercept='1' /></feComponentTransfer></filter></svg>#invert");
+  filter:invert(100%);
+  /* IE 6-7 */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(invert=1);
+  /* IE 8 */
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(invert=1)';
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='gray'><feColorMatrix in='SourceGraphic' type='saturate' values='0' /></filter></svg>#gray");
+  filter:grayscale(100%);
+}
+
+.vertically-aligned {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,40 @@
+@import "pages/about";
+@import "pages/chat";
+@import "pages/form-messages";
+@import "pages/login";
+@import "pages/shared";
+@import "pages/tos";
+@import "utility";
+
+* {
+  box-sizing: border-box;
+  font-family: "Neutral Regular";
+  font-size: 98%;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong, b, .bold {
+  font-family: "Neutral Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+a { text-decoration: none; color: black; }
+
+input {
+  border: 3px solid black;
+  padding: 0.6em;
+  background: white;
+  display: block;
+  width: 100%;
+}
+
+#content {
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+
+.border { border-width: 3px; }

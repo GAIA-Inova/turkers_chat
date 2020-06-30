@@ -1,0 +1,113 @@
+#chat-react {
+  height: 100vh;
+  width: 100vw;
+}
+
+#collective-chat {
+  width: 32em;
+  position: absolute;
+  right: 2em;
+  top: 2em;
+}
+
+.chat-box {
+  border: 3px solid black;
+  background-color: white;
+  padding: 1em;
+  width: 24em;
+  height: 32em;
+  position: absolute;
+
+  &.replying-message {
+    height: 36em;
+
+    input { margin-top: 0.4em; }
+  }
+
+  &.collapsed { height: auto; }
+
+  .return-to-chat-link {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem 0;
+    font-weight: bold;
+  }
+
+  .header {
+    cursor: pointer;
+
+    .chat-controls {
+      height: 1em;
+      font-weight: bold;
+      float: right;
+      cursor: pointer;
+      text-align: center;
+
+      span { padding: 0 0.4rem; }
+    }
+  }
+
+  .next-page-section {
+    text-align: center;
+    cursor: pointer;
+    padding: 0.6em;
+    margin: 0 auto 0.6em;
+    border-bottom: 1px solid black;
+  }
+
+  .messages {
+    max-height: 22em;
+    height: 22em;
+    overflow-y: scroll;
+
+    .reply-icon { display: none; margin-left: 4px; }
+    .can-be-replied { cursor: pointer; }
+
+    .message {
+      margin: 0.8em 0 0;
+      color: #444;
+
+      &:hover {
+        &.can-be-replied .sender .reply-icon { display: inline-block; }
+        &.can-be-replied.turker-message .sender .reply-icon { position: absolute; left: -20px; }
+      }
+
+      &.turker-message {
+        color: black;
+        text-align: right;
+        padding-right: 0.8em;
+
+        .message-reply p { border-left: 0; border-right: solid 3px; }
+      }
+
+      span {
+        position: relative;
+      }
+
+      .sender {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .message-reply {
+    .reply-icon { display: inline-block; }
+
+    p {
+      color: #aaa;
+      border-left: solid 3px;
+      padding: 0 0.4em;
+      font-size: 0.8em;
+
+      &.sender, &.title { font-weight: bold; }
+    }
+  }
+
+  &.closed-for-messages .messages { height: 26em; max-height: 26em; }
+
+  .separator {
+    border-top: 3px solid black;
+    margin: 0.8em 0;
+  }
+}

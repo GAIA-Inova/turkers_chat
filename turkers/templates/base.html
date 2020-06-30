@@ -1,0 +1,28 @@
+{% load render_bundle from webpack_loader %}
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <script src="{% static "js/polyfills.js" %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+  <title>Exchanges w/ Turkers{% block extra_title %}{% endblock %}</title>
+  <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+  <link href="../static/about.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.typotheque.com/WF-031670-010387.css" type="text/css" />
+  {% render_bundle "main" "css" %}
+
+  {% block extra_head %}
+  {% endblock %}
+</head>
+
+<body {% if request.path == '/login/' or request.path == '/register/' %}class="inverted"{% endif %}>
+  <div id="content" class="clearfix">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>
